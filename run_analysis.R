@@ -47,4 +47,4 @@ fullSet <- rbind(trainingSet, testSet)
 fullSet <- merge(fullSet, activities, by.X = "ACtivityCode", by.Y = "ActivityCOde")
 
 final <- aggregate(fullSet[,2:562], fullSet[,c("Activity","Subject")], mean)
-write.table(final, "./tidy_dataset.txt", row.names = FALSE, col.names = FALSE)
+write.table(final, "./tidy_dataset.txt", row.names = FALSE)
